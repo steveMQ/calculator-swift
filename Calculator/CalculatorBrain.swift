@@ -14,8 +14,6 @@ struct CalculatorBrain {
     
     private var pendingBinaryOperation: PendingBinaryOperation?
     
-    private var periodWasEntered = false
-    
     private var operations: Dictionary<String, Operation> = [
         "π" : Operation.constant(Double.pi),
         "e" : Operation.constant(M_E),
