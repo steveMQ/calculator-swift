@@ -16,12 +16,10 @@ class ViewController: UIViewController {
     
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
-        
-        if digit == "." {
-            if display.text!.contains("."){
-                return
-            }
-        }
+    
+        //check to see if the period has already been entered
+        //to validate if the input is legal or not
+        if (Double(display.text! + digit) == nil) {return}
         
         if userIsInTheMiddleOfTyping {
             let textCurrentlyInDisplay = display.text!
